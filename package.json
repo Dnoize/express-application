@@ -1,0 +1,38 @@
+{
+  "name": "10-express-application",
+  "version": "1.0.0",
+  "description": "This app is an example of Express Application",
+  "main": "app.start.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dnoize/express-application.git"
+  },
+  "keywords": [
+    "technocite",
+    "js",
+    "node",
+    "express",
+    "mongoose",
+    "example"
+  ],
+  "author": "Damien Dechef",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Dnoize/express-application/issues"
+  },
+  "homepage": "https://github.com/Dnoize/express-application#readme",
+  "devDependencies": {
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^6.0.0",
+    "errorhandler": "^1.5.0",
+    "es6-promisify": "^6.0.0",
+    "express": "^4.16.3",
+    "express-hbs": "^1.0.4",
+    "mongoose": "^5.2.13",
+    "node-notifier": "^5.2.1"
+  },
+  "dependencies": {}
+}
