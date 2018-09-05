@@ -1,7 +1,23 @@
 {
-    "hello" : "Hello",
-    "form" : {
-        "save" : "Save",
-        "edit" : "Edit"
-    }
+	"hello": "Hello",
+	"form": {
+		"save": "Save",
+		"edit": "Edit"
+	},
+	"How are you": "How are you",
+	"form'save'": "form'save'",
+	"save": "save",
+	"form[0]": "form[0]",
+	"form0": "form0",
+	"formsave": "formsave",
+	"form.save": "form.save",
+	"form.0": "form.0",
+	"form.[0]": "form.[0]",
+	"form[1]": "form[1]",
+	"form[save]": "form[save]",
+	"form(save)": "form(save)",
+	"form('save')": "form('save')",
+	"form['save']": "form['save']",
+	"form_save": "form_save",
+	"form:save": "form:save"
 }

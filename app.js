@@ -3,8 +3,8 @@ const I18n = require('i18n');
 const CookieParser = require('cookie-parser');
 const Router = require('./app.router');
 const Errorhandler = require('./helpers/error-handler');
-//const Engine = require('express-hbs');
-//const HBSHelpers = require('./app.hbs.helpers');
+const Engine = require('express-hbs');
+const HBSHelpers = require('./helpers/hbs-helpers');
 //const Dotenv = require('dotenv');
 //const Promisify = require('es6-promisify');
 //const Mongoose = require('mongoose');
@@ -21,6 +21,15 @@ I18n.configure({
     cookie : 'movies-app-locales',
     directory: __dirname + '/locales'
 });
+
+app.engine('hbs', Engine.express4({
+    //partialsDir : `${__dirname}/views/partials`,
+    //defaultLayout : `${__dirname}/views/layouts/default.hbs`,
+}));
+
+app.set('view engine', 'hbs');
+
+HBSHelpers.registerHelpers(Engine);
 
 
 /**

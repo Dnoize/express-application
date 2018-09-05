@@ -1,7 +1,8 @@
 {
-    "hello" : "bonjour",
-    "form" : {
-        "save" : "Sauvegarder",
-        "edit" : "Editer"
-    }
+	"hello": "bonjour",
+	"form": {
+		"save": "Sauvegarder",
+		"edit": "Editer"
+	},
+	"How are you": "Comment vas-tu?"
 }
