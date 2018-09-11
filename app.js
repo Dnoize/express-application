@@ -5,13 +5,36 @@ const Router = require('./app.router');
 const Errorhandler = require('./helpers/error-handler');
 const Engine = require('express-hbs');
 const HBSHelpers = require('./helpers/hbs-helpers');
-//const Dotenv = require('dotenv');
+const Mongoose = require('mongoose');
+require('dotenv').config({path: './variables.env'});
 //const Promisify = require('es6-promisify');
-//const Mongoose = require('mongoose');
 //const NodeNotifier = require('node-notifier')
 
 const app = Express();
 
+
+/**
+ * Configure db via Mongoose
+ */
+Mongoose.Promise = global.Promise;
+
+//------------Connexion
+
+Mongoose.connect(process.env.DB_HOST, { useNewUrlParser: true }, (error) => {
+    if(error) throw error;
+    console.log('Mongo is now connected to our system please request away.')
+});
+
+
+
+app.engine('hbs', Engine.express4({
+    partialsDir : `${__dirname}/views/partials`,
+    defaultLayout : `${__dirname}/views/layouts/default.hbs`,
+}));
+
+app.set('view engine', 'hbs');
+
+HBSHelpers.registerHelpers(Engine);
 
 /**
  * Configure i18n module
@@ -22,14 +45,7 @@ I18n.configure({
     directory: __dirname + '/locales'
 });
 
-app.engine('hbs', Engine.express4({
-    //partialsDir : `${__dirname}/views/partials`,
-    //defaultLayout : `${__dirname}/views/layouts/default.hbs`,
-}));
-
-app.set('view engine', 'hbs');
-
-HBSHelpers.registerHelpers(Engine);
+app.use(Express.static('public'))
 
 
 /**

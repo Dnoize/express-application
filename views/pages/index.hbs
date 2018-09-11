@@ -1,0 +1,106 @@
+<div class="row">
+  <div class="col-md-9">
+    <div class="slider">
+      <ul class="slides">
+        {{#each topMovies3 as |movie|}}
+        <li><a href="/review/{{movie._id}}"><img src="{{movie.fields.image_url}}" alt="Slide" {{movie.fields.title}}></a></li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="row">
+      {{#each moviesColRight as |movie|}}
+      <div class="col-sm-6 col-md-12">
+        <ul class="latest-movie">
+        <li><a href="/review/{{movie._id}}"><img src="{{movie.fields.image_url}}" alt="Slide" {{movie.fields.title}}></a></li>
+        </div>
+      </ul>
+      {{/each}}
+      <div class="col-sm-6 col-md-12">
+        <div class="latest-movie">
+        <li><a href="/review/{{movie._id}}"><img src="{{movie.fields.image_url}}" alt="Slide" {{movie.fields.title}}></a></li>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> <!-- .row -->
+<div class="row">
+  {{#each moviesAboveFooter as |movie|}}
+    <div class="col-sm-6 col-md-3">
+      <ul class="latest-movie">
+        <li><a href="/review/{{movie._id}}"><img src="{{movie.fields.image_url}}" alt="Slide" {{movie.fields.title}}></a></li>
+      </ul>
+    </div>
+    {{/each}}
+  
+</div> <!-- .row -->
+
+<div class="row">
+  <div class="col-md-4">
+    <h2 class="section-title">December premiere</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+    <ul class="movie-schedule">
+      <li>
+        <div class="date">16/12</div>
+        <h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
+      </li>
+      <li>
+        <div class="date">16/12</div>
+        <h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
+      </li>
+      <li>
+        <div class="date">16/12</div>
+        <h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
+      </li>
+      <li>
+        <div class="date">16/12</div>
+        <h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
+      </li>
+    </ul> <!-- .movie-schedule -->
+  </div>
+  <div class="col-md-4">
+    <h2 class="section-title">November premiere</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+    <ul class="movie-schedule">
+      <li>
+        <div class="date">16/12</div>
+        <h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
+      </li>
+      <li>
+        <div class="date">16/12</div>
+        <h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
+      </li>
+      <li>
+        <div class="date">16/12</div>
+        <h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
+      </li>
+      <li>
+        <div class="date">16/12</div>
+        <h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
+      </li>
+    </ul> <!-- .movie-schedule -->
+  </div>
+  <div class="col-md-4">
+    <h2 class="section-title">October premiere</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+    <ul class="movie-schedule">
+      <li>
+        <div class="date">16/12</div>
+        <h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
+      </li>
+      <li>
+        <div class="date">16/12</div>
+        <h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
+      </li>
+      <li>
+        <div class="date">16/12</div>
+        <h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
+      </li>
+      <li>
+        <div class="date">16/12</div>
+        <h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
+      </li>
+    </ul> <!-- .movie-schedule -->
+  </div>
+</div>
